@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 
 def get_fun_fact(topic):
-    openai.api_key = "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"
+    openai.api_key = "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"
 
     prompt_text = f"Tell me a fun fact about {topic}."
 
