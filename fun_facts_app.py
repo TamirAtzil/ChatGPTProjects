@@ -7,17 +7,17 @@ def get_fun_fact(topic):
     prompt_text = f"Tell me a fun fact about {topic}."
 
     response = openai.Completion.create(
-      model="text-davinci-002",  
+      model="text-davinci-002",
       prompt=prompt_text,
       max_tokens=150
     )
 
-    fun_fact = response.choices[0].text.strip()
+    fact = response.choices[0].text.strip()
 
-    return fun_fact
+    return fact
 
 # Streamlit UI
-st.set_page_config(page_title="Farsi-style Fun Facts Generator", layout="centered")
+st.set_page_config(page_title="Fun Fact Generator", layout="centered")
 
 st.markdown("""
     <style>
@@ -27,19 +27,19 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("Fun Facts Generator 🍎")
+st.title("Fun Fact Generator 🌟")
 st.markdown("""
-For those moments when you are lost in life, and you need some Farsi wisdom to make things better
+Dive into a world of interesting tidbits on any topic you fancy. Knowledge, after all, is fun!
 """)
 
 topic = st.text_input("🔍 Enter a topic for the fun fact:")
 
 if topic:
-    with st.spinner("Generating a fun fact for you..."):
-        fun_fact = get_fun_fact(topic)
-    st.success(fun_fact)
+    with st.spinner("Generating an interesting fact..."):
+        fact = get_fun_fact(topic)
+    st.success(fact)
 
 st.markdown("""
 ---
-**Enjoy the fun, share the joy!** 🎉
+**Every day is a school day!** 📘
 """)
