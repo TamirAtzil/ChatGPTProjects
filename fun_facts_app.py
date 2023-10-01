@@ -35,9 +35,9 @@ Come get some knowledge and wisdom from the Sexiest Farsi exists, to become bett
 topic = st.text_input("🔍 Enter a topic that you want the Farsi to tell you about:")
 
 if topic:
-    with st.spinner(f"The Farsi knows everything about {topic}. here is just a little taste:"):
+    with st.spinner(f"The Farsi knows everything about {topic}..."):
         fact = get_fun_fact(topic)
-    st.success(f"The Farsi knows everything about {topic}. here is just a little taste:" + fact)
+    st.success(fact)
 
 st.markdown("""
 ---
