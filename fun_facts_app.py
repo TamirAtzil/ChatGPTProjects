@@ -36,8 +36,8 @@ topic = st.text_input("🔍 Enter a topic that you want the Farsi to tell you ab
 
 if topic:
     with st.spinner(f"The Farsi knows everything about {topic}. here is just a little taste:"):
-        fact = get_fun_fact(f"The Farsi knows everything about {topic}. here is just a little taste:" + topic)
-    st.success(fact)
+        fact = get_fun_fact(topic)
+    st.success(f"The Farsi knows everything about {topic}. here is just a little taste:" + fact)
 
 st.markdown("""
 ---
