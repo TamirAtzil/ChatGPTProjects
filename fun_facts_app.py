@@ -17,7 +17,7 @@ def get_fun_fact(topic):
     return fact
 
 # Streamlit UI
-st.set_page_config(page_title="Fun Fact Generator", layout="centered")
+st.set_page_config(page_title="Fun Fact Generator By The LEGENDARY Farsi 👳🏾‍", layout="centered")
 
 st.markdown("""
     <style>
@@ -27,15 +27,15 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("Fun Fact Generator 🌟")
+st.title("Fun Fact Generator By The LEGENDARY Farsi 👳🏾")
 st.markdown("""
-Dive into a world of interesting tidbits on any topic you fancy. Knowledge, after all, is fun!
+Come get some knowledge and wisdom from the Sexiest Farsi exists, to become better version of yourself 🧠! 
 """)
 
-topic = st.text_input("🔍 Enter a topic for the fun fact:")
+topic = st.text_input("🔍 Enter a topic that you want the Farsi to tell you about:")
 
 if topic:
-    with st.spinner("Generating an interesting fact..."):
+    with st.spinner(f"The Farsi knows everything about {topic}. here is just a little taste:"):
         fact = get_fun_fact(topic)
     st.success(fact)
 
