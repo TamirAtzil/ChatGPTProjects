@@ -2,7 +2,7 @@ import openai
 
 def get_fun_fact(topic):
     # Initialize the OpenAI API with your API key
-    openai.api_key = "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"
+    openai.api_key = ""
 
     # Construct the prompt for GPT
     prompt_text = f"Tell me a fun fact about {topic}."
