@@ -4,7 +4,7 @@ import streamlit as st
 def get_fun_fact(topic):
     openai.api_key = st.secrets["MY_OPENAI_API_KEY"]
 
-    prompt_text = f"Tell me a fun fact aboutt {topic}."
+    prompt_text = f"Tell me a fun fact about {topic}."
 
     response = openai.Completion.create(
       model="text-davinci-002",
